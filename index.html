@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>COVID-19 Data Center </title>
+    <meta name="description" content="COVID-19 resources for the Republic of Zimbabwe. Get to know more about the pandemic and helps you stay informed all the time and anytime" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="https://africansurveyors.net/images/Corona_cover.png">
+    <!-- MDBootstrap CDN for the UI Kit -->
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- MDB -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.2.0/mdb.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="#">upgrade your browser</a> to improve your experience.
+      </p>
+    <![endif]-->
+
+    <!-- Navigation Bar Start -->
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+        <!-- Container wrapper -->
+        <div class="container-fluid">
+          <!-- Toggle button -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-mdb-toggle="collapse"
+            data-mdb-target="#navbarCenteredExample"
+            aria-controls="navbarCenteredExample"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="fas fa-bars"></i>
+          </button>
+          <a class="navbar-brand" href="#">
+            <img
+              src="https://blog.justlanded.com/wp-content/uploads/2018/01/zimbabwe-1758992_1280.png"
+              height="30"
+              alt=""
+              loading="lazy"
+            />
+            COVID-19 Center 
+          </a>
+      
+          <!-- Collapsible wrapper -->
+          <div
+            class="collapse navbar-collapse justify-content-center"
+            id="navbarCenteredExample"
+          >
+            <!-- Left links -->
+            <ul class="navbar-nav mb-2 mb-lg-0">
+                <li class="nav-item dropdown">
+                    <a
+                      class="nav-link active dropdown-toggle"
+                      href="#"
+                      id="navbarDropdown"
+                      aria-current="page"
+                      role="button"
+                      data-mdb-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Infections
+                    </a>
+                    <!-- Dropdown menu -->
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="https://surveyor-jr.maps.arcgis.com/apps/opsdashboard/index.html#/34d90727cc5548dab0bd6cce8db04595">Dashboards</a></li>
+                      <li><a class="dropdown-item" href="#covid">About The Virus</a></li>
+                      <li><a class="dropdown-item" href="">Myths</a></li>
+                    </ul>
+                  </li>              
+                  <!-- Navbar dropdown -->
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link active dropdown-toggle"
+                      href="#"
+                      id="navbarDropdown"
+                      aria-current="page"
+                      role="button"
+                      data-mdb-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Vaccination
+                    </a>
+                    <!-- Dropdown menu -->
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="https://surveyor-jr.maps.arcgis.com/apps/opsdashboard/index.html#/34d90727cc5548dab0bd6cce8db04595">Dashboards</a></li>
+                      <li><a class="dropdown-item" href="#vaccine">Information</a></li>
+                      <li><a class="dropdown-item" href="https://covid19.africansurveyors.net/vaccine_finder/">Get A Vaccine</a></li>
+                      <li><a class="dropdown-item" href="">Myths</a></li>
+                    </ul>
+                  </li>
+              <li class="nav-item">
+                  <!-- redirect to Pindula for now-->
+                <a class="nav-link active" aria-current="page" href="https://news.pindula.co.zw/coronavirus/" target="_blank">News</a> 
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="https://github.com/African-Surveyors-Connect/Zimbabwe-COVID-19-Data" target="_blank">Data</a>
+              </li>
+              
+            </ul>
+            <!-- Left links -->
+          </div>
+          <!-- Collapsible wrapper -->
+          <!-- Right elements -->
+    <ul class="navbar-nav flex-row">      
+        <li class="nav-item me-3 me-lg-1">
+            <a class="btn btn-success" 
+            href="#" 
+            role="button"
+            data-mdb-toggle="modal"
+            data-mdb-target="#developer"
+            >Credits</a>
+        </li>       
+     <!-- Right elements -->
+        </div>
+        <!-- Container wrapper -->
+      </nav>
+
+      <!-- container -->
+        <div class="container-fluid">
+
+            <!-- Background image & Search Start -->
+  <div
+  class="p-5 text-center bg-image"
+  style="
+    background-image: url('https://fscluster.org/sites/default/files/styles/core-group-featured-image/public/banner-696x321.png?itok=l7uFday9');
+    height: 200px;
+    margin-top: 58px;
+  ">
+  <div class="mask" style="background-color: rgba(75, 62, 62, 0.6)">
+    <div class="d-flex justify-content-center align-items-center h-100">
+      <div class="text-white">
+        <h3 class="mb-3">ZIMBABWE COVID-19 DATA CENTER</h3>
+        <!-- Search Button start -->
+        <div class="input-group">
+            <!-- Search was here -->
+          </div>
+          <!-- Search Button End -->
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Background image & Search End -->
+        </div>
+<!-- container end -->
+
+<!-- Advertising Section -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<!-- Django Header & Footer -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1726892928324403"
+     data-ad-slot="2140483921"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<!-- Advertising Section End -->
+
+<main role="main" class="container">
+    <div class="row">
+         
+           <!-- all content goes here -->
+           <div class="mt-4">
+            <div class="container-fluid">
+              <span class="navbar-brand mb-0 h1">STATISTICAL RESOURCES</span>
+            </div>
+          </div>
+          
+          <div class="row row-cols-1 row-cols-md-3 g-4 mt-4">
+            <div class="col">
+              <div class="card h-100">
+                <img
+                  src="https://pbs.twimg.com/media/Eclnf3nXsAMN3D5.png"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title"><a href="https://surveyor-jr.maps.arcgis.com/apps/opsdashboard/index.html#/34d90727cc5548dab0bd6cce8db04595" target="_blank">Infections Dashboard</a></h5>
+                  <p class="card-text">
+                    View, Analyse and Interpolate COVID-19 Statistics for Zimbabwe using the dashboard experience.  
+                  </p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">created: Mar-2020</small>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <img
+                  src="https://pbs.twimg.com/media/EvGP08EXIAExide.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title"><a href="https://surveyor-jr.maps.arcgis.com/apps/opsdashboard/index.html#/f8e4092e67ae4e0a83b73e0756bd793a" target="_blank">Vaccination Progress Dashboard</a></h5>
+                  <p class="card-text">
+                    Get latest vaccination progress in Zimbabwe. How many have been vaccinated? How many doses are available?
+                  </p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">created: Feb-2021</small>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <img
+                  src="https://hbr.org/resources/images/article_assets/2020/05/May20_07_PandemicDataSasha.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title"><a href="https://github.com/African-Surveyors-Connect/Zimbabwe-COVID-19-Data" target="_blank">Raw Data</a></h5>
+                  <p class="card-text">
+                    Retrieve, Download and View Raw COVID-19 Data from our repositories which is available for Non-Commercial usage
+                  </p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">updated every 24-hrs</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="mt-4 mb-4">
+            <div class="container-fluid">
+              <span class="navbar-brand mb-0 h1">LOCATION RESOURCES (Finders)</span>
+            </div>
+          </div>
+          
+          <div class="row row-cols-1 row-cols-md-3 g-4 mt-4">
+            <div class="col">
+              <div class="card h-100">
+                <img
+                  src="https://www.paho.org/sites/default/files/styles/flexslider_full/public/2021-01/covid-19-vaccination-1500-991-2.jpg?h=33d2e14c&itok=nHmyhd3y"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title"><a href="https://covid19.africansurveyors.net/find_a_vaccine/">Vaccine Finder</a></h5>
+                  <p class="card-text">
+                    Find locations of Health Care Facilities where you can get vaccinated. Get vaccinated and prevent yourself and your loved ones from infection
+                  </p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">Created Feb-2021</small>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <img
+                  src="https://d4r15a7jvr7vs.cloudfront.net/ewoJICAgICAgICAgICAgICAgICJidWNrZXQiOiAiZmlsZXMubGJyLmNsb3VkIiwKCSAgICAgICAgICAgICAgICAia2V5IjogInB1YmxpYy9zaHV0dGVyc3RvY2stMTY1Njg4MzcyOS5qcGciLAoJICAgICAgICAgICAgICAgICJlZGl0cyI6IHsKCSAgICAgICAgICAgICAgICAgICJyZXNpemUiOiB7CgkgICAgICAgICAgICAgICAgICAgICJ3aWR0aCI6IDk0NSwKCSAgICAgICAgICAgICAgICAgICAgImhlaWdodCI6IDUyNiwKCSAgICAgICAgICAgICAgICAgICAgImZpdCI6ICJjb3ZlciIKCSAgICAgICAgICAgICAgICAgIH0KCSAgICAgICAgICAgICAgICB9CgkgICAgICAgICAgICB9"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title"><a href="https://covid19.africansurveyors.net/iso_treatment_finder/">Isolation & Treatment Centers</a></h5>
+                  <p class="card-text">
+                    The locations of all approved health care facilities in Zimbabwe for isolation and treatment of COVID-19 related patients
+                  </p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">Created: May-2020</small>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <img
+                  src="https://cdn05.allafrica.com/download/pic/main/main/csiid/00551861:6392dca6fb0356d0c4a2398e0e923d49:arc614x376:w1200.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title"><a href="https://covid19.africansurveyors.net/quarantine_finder/">Quarantine Center</a></h5>
+                  <p class="card-text">
+                    Recently back home and tested positive for COVID-19? Find places where you can prevent risking family and friends from infection
+                  </p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">created: Jun-2020</small>
+                </div>
+              </div>
+            </div>
+          </div>
+           <!-- content here end -->
+           <!-- Advertising Section -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<!-- Django Header & Footer -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1726892928324403"
+     data-ad-slot="2140483921"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<!-- Advertising Section End -->
+
+<div class="mt-4 mb-4">
+  <div class="container-fluid" id="covid">
+    <span class="navbar-brand mb-0 h1">COVID-19 Virus Information (About & Guides)</span>
+  </div>
+</div>
+
+<!-- Tabs navs -->
+<ul class="nav nav-tabs nav-justified mb-3" id="ex1" role="tablist">
+  <li class="nav-item" role="presentation">
+    <a
+      class="nav-link active"
+      id="ex3-tab-1"
+      data-mdb-toggle="tab"
+      href="#ex3-tabs-1"
+      role="tab"
+      aria-controls="ex3-tabs-1"
+      aria-selected="true"
+      >Overview</a
+    >
+  </li>
+  <li class="nav-item" role="presentation">
+    <a
+      class="nav-link"
+      id="ex3-tab-2"
+      data-mdb-toggle="tab"
+      href="#ex3-tabs-2"
+      role="tab"
+      aria-controls="ex3-tabs-2"
+      aria-selected="false"
+      >Prevention</a
+    >
+  </li>
+  <li class="nav-item" role="presentation">
+    <a
+      class="nav-link"
+      id="ex3-tab-3"
+      data-mdb-toggle="tab"
+      href="#ex3-tabs-3"
+      role="tab"
+      aria-controls="ex3-tabs-3"
+      aria-selected="false"
+      >Symptoms</a
+    >
+  </li>
+</ul>
+<!-- Tabs navs -->
+
+<!-- Tabs content -->
+<div class="tab-content" id="ex2-content">
+  <div
+    class="tab-pane fade show active"
+    id="ex3-tabs-1"
+    role="tabpanel"
+    aria-labelledby="ex3-tab-1"
+  >
+    <p>
+      Coronavirus disease (COVID-19) is an infectious disease caused by a newly discovered coronavirus.
+    </p>
+
+      <p>Most people infected with the COVID-19 virus will experience mild to moderate respiratory illness and 
+          recover without requiring special treatment.  Older people, and those with underlying medical problems
+          like cardiovascular disease, diabetes, chronic respiratory disease, and cancer are more likely to develop
+           serious illness.
+      </p>
+      
+      <p>The best way to prevent and slow down transmission is to be well informed about the COVID-19 virus, the 
+          disease it causes and how it spreads. Protect yourself and others from infection by washing your hands or 
+          sing an alcohol based rub frequently and not touching your face.
+      </p> 
+      
+      <p>The COVID-19 virus spreads primarily through droplets of saliva or discharge from the nose when an 
+          infected person coughs or sneezes, so it’s important that you also practice respiratory etiquette 
+          (for example, by coughing into a flexed elbow).
+    </p>
+  </div>
+  <div
+    class="tab-pane fade"
+    id="ex3-tabs-2"
+    role="tabpanel"
+    aria-labelledby="ex3-tab-2"
+  >
+    <p>To prevent infection and to slow transmission of COVID-19, do the following:</p>
+    <ul>
+        <li>Wash your hands regularly with soap and water, or clean them with alcohol-based hand rub.</li>
+        <li>Maintain at least 1 metre distance between you and people coughing or sneezing.</li>
+        <li>Avoid touching your face</li>
+        <li>Cover your mouth and nose when coughing or sneezing.</li>
+        <li>Stay home if you feel unwell.</li>
+        <li>Refrain from smoking and other activities that weaken the lungs.</li>
+        <li>Practice physical distancing by avoiding unnecessary travel and staying away from large groups of people.</li>
+    </ul>
+  </div>
+  <div
+    class="tab-pane fade"
+    id="ex3-tabs-3"
+    role="tabpanel"
+    aria-labelledby="ex3-tab-3"
+  >
+    <p>COVID-19 affects different people in different ways. Most infected people will develop mild to moderate illness and recover without hospitalization.</p>
+    <p>Most common symptoms:</p>
+    <ul>
+        <li>fever</li>
+        <li>dry cough</li>
+        <li>tiredness</li>
+    </ul>
+    <p>Less common symptoms:</p>
+    <ul>
+        <li>aches and pains</li>
+        <li>sore throat</li>
+        <li>diarrhoea</li>
+        <li>conjunctivitis</li>
+        <li>headache</li>
+        <li>loss of taste or smell</li>
+        <li>a rash on skin, or discolouration of fingers or toes.</li>
+    </ul>
+    <p>Serious symptoms:</p>
+    <ul>
+        <li>difficulty breathing or shortness of breath.</li>
+        <li>chest pain or pressure.</li>
+        <li>loss of speech or movement.</li>
+    </ul>
+    <p>
+        Seek immediate medical attention if you have serious symptoms.  Always call before visiting your doctor or health facility. 
+    </p>
+
+      <p>
+          People with mild symptoms who are otherwise healthy should manage their symptoms at home.
+      </p> 
+
+`   <p>On average it takes 5–6 days from when someone is infected with the virus for symptoms to show, however it can take up to 14 days. 
+  </p>
+  </div>
+</div>
+<!-- Tabs content -->
+
+<!-- Advertising Section -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<!-- Django Header & Footer -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1726892928324403"
+     data-ad-slot="2140483921"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<!-- Advertising Section End -->
+
+<div class="mt-4 mb-4">
+  <div class="container-fluid" id="vaccine">
+    <span class="navbar-brand mb-0 h1">Vaccine Information (About & Guides)</span>
+  </div>
+</div>
+
+<!-- Tabs navs -->
+<ul class="nav nav-tabs nav-justified mb-3" id="ex1" role="tablist">
+  <li class="nav-item" role="presentation">
+    <a
+      class="nav-link active"
+      id="ex3-tab-1"
+      data-mdb-toggle="tab"
+      href="#ex3-tabs-1"
+      role="tab"
+      aria-controls="ex3-tabs-1"
+      aria-selected="true"
+      >What is a Vaccine?</a
+    >
+  </li>
+  <li class="nav-item" role="presentation">
+    <a
+      class="nav-link"
+      id="ex3-tab-2"
+      data-mdb-toggle="tab"
+      href="#ex3-tabs-2"
+      role="tab"
+      aria-controls="ex3-tabs-2"
+      aria-selected="false"
+      >How do they work?</a
+    >
+  </li>
+  <li class="nav-item" role="presentation">
+    <a
+      class="nav-link"
+      id="ex3-tab-3"
+      data-mdb-toggle="tab"
+      href="#ex3-tabs-3"
+      role="tab"
+      aria-controls="ex3-tabs-3"
+      aria-selected="false"
+      >Are they neccessary? </a
+    >
+  </li>
+</ul>
+<!-- Tabs navs -->
+
+<!-- Tabs content -->
+<div class="tab-content" id="ex2-content">
+  <div
+    class="tab-pane fade show active"
+    id="ex3-tabs-1"
+    role="tabpanel"
+    aria-labelledby="ex3-tab-1"
+  >
+    <p>
+      Vaccines are medical products that are given to people (both children and adults) to
+      protect them against serious and sometimes deadly diseases.
+      These vaccines help to protect us against all vaccine preventable diseases
+    </p>
+    <h4>& COVID-19 Vaccines?</h4>
+    <p>
+      It is a vaccine that is intended to provide immunity against COVID-19. Several safe
+      and effective vaccines have now been produced and approved for use and countries
+      have started rolling out COVID 19 vaccination programmes to protect people. 
+    </p>
+  </div>
+  <div
+    class="tab-pane fade"
+    id="ex3-tabs-2"
+    role="tabpanel"
+    aria-labelledby="ex3-tab-2"
+  >
+    <p>
+      Vaccines train your immune system to create antibodies, just as it does when
+      it’s exposed to a disease. However, because vaccines contain only killed or
+      weakened forms of germs like viruses or bacteria, they do not cause the disease
+      or put you at risk of its complications.
+    </p>
+    <ul>
+      <li>
+          Some vaccines require multiple doses, given weeks or months apart. 
+      </li>
+      <li>This is sometimes needed to allow for the production of long-lived antibodies and
+          development of memory cells.
+      </li>
+      <li>In this way, the body is trained to fight the specific disease-causing organism,
+              building up memory against the pathogen so it can fight it in the future 
+      </li>
+      <li>
+          Vaccines reduce risks of getting a disease by working with your body’s natural
+          defences to build protection against specific diseases. 
+      </li>
+    </ul>
+  </div>
+  <div
+    class="tab-pane fade"
+    id="ex3-tabs-3"
+    role="tabpanel"
+    aria-labelledby="ex3-tab-3"
+  >
+    <p>
+      Yes, vaccines are an essential public health measure for the prevention and control of
+      COVID-19 locally and globally. Vaccines have been a major pillar for the control of
+      similar epidemics in the past and will equally be important for COVID 19. The vaccines
+      will complement existing prevention and control measures and not replace them.
+      Zimbabwe together with the rest of the world is rolling out safe and effective COVID
+      19 vaccines to control and eventually eliminate COVID 19 burden in the country
+    </p>
+  </div>
+</div>
+<!-- Tabs content -->
+
+<div class="mt-4">
+
+  <h5>What types of COVID-19 vaccines are being developed? How would they
+  work?
+  </h5>
+  <p>
+      Scientists are developing many potential vaccines for COVID-19, all designed to
+      teach the body’s immune system to safely recognize and block the virus that causes
+      COVID-19. Different types of vaccines include:
+  </p>
+  <ul>
+      <li>Inactivated or weakened virus vaccines, which use a form of the virus that
+          doesn’t cause disease, but still prompts an immune response
+      </li>
+      <li>
+          Protein-based vaccines, which a coronavirus protein or protein fragment to
+          safely prompt an immune response
+      </li>
+      <li>
+          Viral vector vaccines, which use a virus that has been engineered so it
+          can’t cause disease, but produces coronavirus proteins to safely prompt
+          an immune response
+      </li>
+  </ul>
+  <p>
+      RNA and DNA vaccines, a new approach that provides “instructions” for cells to build
+      a protein that safely prompts an immune response
+  </p>
+
+  <h5>Why should I get vaccinated?</h5>
+  <ul>
+      <li>Vaccines save lives. Vaccines will help protect you and those around you against
+          vaccine preventable diseases that can cause serious harm or death
+      </li>
+      <li>Those who cannot be vaccinated like very young babies, the very ill or those with
+          certain allergies and people with compromised immune systems depend on others
+          being vaccinated to ensure they are also safe from vaccine-preventable diseases.
+      </li>
+      <li>Without vaccines, we are at high risk of serious illness and disability from diseases
+          like measles, meningitis, pneumonia, tetanus, polio and COVID 19 
+      </li>
+  </ul>
+
+
+
+    </div>
+</main>
+
+<!-- Advertising Section -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<!-- Django Header & Footer -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1726892928324403"
+     data-ad-slot="2140483921"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<!-- Advertising Section End -->
+
+<!-- Footer -->
+<footer class="bg-light text-center text-lg-start">
+    <!-- Grid container -->
+    <div class="container p-4">
+      <!--Grid row-->
+      <div class="row">
+        <!--Grid column-->
+        <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+          <h5 class="text-uppercase">About</h5>
+  
+          <p>
+            Zimbabwe COVID-19 Data Center is a web platform for Researchers, Scientists and the General Public to get access to COVID-19 Information in Zimbabwe 
+            throughout the duration of the pandemic. 
+          </p>
+          <p>
+            <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">ZWE COVID-19 Data Center</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://africansurveyors.net" property="cc:attributionName" rel="cc:attributionURL">African Surveyors Connect</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.<br />Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/Surveyor-Jr/Zimaps-Portal/Zimaps-Portal" rel="dct:source">https://github.com/Surveyor-Jr/Zimaps-Portal/Zimaps-Portal</a>.
+          </p>
+        </div>
+        <!--Grid column-->
+  
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Important Links</h5>
+  
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="https://storymaps.arcgis.com/stories/7047146f14fa4236aa3effe4dc033025" class="text-dark">StoryMap</a>
+            </li>
+            <li>
+              <a href="#!" class="text-dark">Source Code</a>
+            </li>
+            <li>
+              <a href="https://twitter.com/MoHCCZim" class="text-dark">Data Sources</a>
+            </li>
+            <li>
+              <a href='https://www.paynow.co.zw/Payment/Link/?q=c2VhcmNoPWFkbWluJTQwYWZyaWNhbnN1cnZleW9ycy5jby56dyZhbW91bnQ9MC4wMCZyZWZlcmVuY2U9Q09WSUQtMTkrRGF0YStDZW50ZXIrRG9uYXRpb24mbD0w' target='_blank'><img src='https://www.paynow.co.zw/Content/Buttons/Medium_buttons/button_donate_medium.png' style='border:0' /></a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+  
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase mb-0">Want To Learn GIS?</h5>
+            <script src="https://apis.google.com/js/platform.js"></script>
+            <div class="g-ytsubscribe" data-channelid="UCse3CnS0Fyg8w53y6r00G3A" data-layout="full" data-count="hidden">
+
+            </div>
+            <hr>
+          <h5 class="text-uppercase mb-0">Social-Media</h5>
+  
+          <ul class="list-unstyled">
+           <a href="http://facebook.com/africansurveyors" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+           <a href="http://twitter.com/africa_survey" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+           <a href="https://youtube.com/channel/UCse3CnS0Fyg8w53y6r00G3A" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
+           <a href="https://github.com/Surveyor-Jr/Zimbabwe-COVID-19-Data-Center-Resources" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+           <a href="https://www.linkedin.com/company/african-surveyors-connect/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+          </ul>
+        </div>
+        <!--Grid column-->
+      </div>
+      <!--Grid row-->
+    </div>
+    <!-- Grid container -->
+
+     <!-- Developer Information -->
+    <!-- Modal -->
+<div
+class="modal fade"
+id="developer"
+tabindex="-1"
+aria-labelledby="exampleModalLabel"
+aria-hidden="true"
+>
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalLabel">Developer Information</h5>
+      <button
+        type="button"
+        class="btn-close"
+        data-mdb-dismiss="modal"
+        aria-label="Close"
+      ></button>
+    </div>
+    <div class="modal-body">
+      <div class="card">
+        <img
+          src="https://africansurveyors.net/images/Kumbirai Matingo.jpg"
+          class="img-fluid rounded-pill"
+          alt="Surveyor Jr Image"
+          height="200"
+          width="200"
+        />
+        <div class="card-body">
+          <h5 class="card-title">MATINGO KUMBIRAI N</h5>
+          <span class="badge bg-success">Freelancer</span>
+          <span class="badge bg-primary">Student</span>
+          <span class="badge bg-dark">GIS Analyst</span>
+          <span class="badge bg-danger">Land Surveyor</span>
+          <span class="badge bg-warning">Programmer</span>
+          <p class="card-text">
+            A 3rd year Surveying & Geomatics Student at <a href="https://msu.ac.zw/">Midlands State University</a> with main interests in the use of Geographic
+            Information Systems (GIS) for <strong>Health</strong> and <strong>Land Management</strong>. 
+          </p>
+          <p>You can get to know more about what I do and have done through my social media pages</p>
+          <p>
+            Looking to hire someone like me? <strong><a href="https://africansurveyors.net/images/Resume for Kumbirai Matingo.pdf" target="_blank">Download my Resume</a></strong>
+          </p>
+          <h5>I am very much active on social media too</h5>
+          <p>
+            LinkedIn <i class="fab fa-linkedin-in"></i> : <a href="https://www.linkedin.com/in/kumbirai-matingo-6910a617a/" target="_blank" rel="noopener noreferrer">https://www.linkedin.com/in/kumbirai-matingo-6910a617a/</a><br>
+            Facebook <i class="fab fa-facebook-f"></i> : <a href="https://facebook.com/kumbiraimatingo" target="_blank" rel="noopener noreferrer">Kumbirai Nicholas Matingo</a><br>
+            Twitter <i class="fab fa-twitter"></i> : <a href="https://twitter.com/surveyor_jr" target="_blank" rel="noopener noreferrer">surveyor_jr</a><br>          
+            YouTube <i class="fab fa-youtube"></i> : <a href="https://youtube.com/channel/UCse3CnS0Fyg8w53y6r00G3A" target="_blank" rel="noopener noreferrer">African Surveyors Connect</a><br>
+            Telegram <i class="fab fa-telegram-plane"></i> : <a href="https://t.me/surveyorjr" target="_blank" rel="noopener noreferrer">surveyorjr</a><br>
+            WhatsApp <i class="fab fa-whatsapp"></i> : <a href="https://wa.me/263776887606/" target="_blank" rel="noopener noreferrer">+263-77-6-887-606</a><br>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-dark" data-mdb-dismiss="modal">
+        Close
+      </button>
+      <a
+        type="button"
+        class="btn btn-success"
+        data-mdb-toggle="tooltip"
+        data-mdb-placement="top"
+        href="mailto:matingonk@gmail.com"
+        title="My email address is matingonk@gmail.com"
+      >
+  Hire Me
+    </a>
+    </div>
+  </div>
+</div>
+</div>
+  
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+      © 2021 Copyright:
+      <a class="text-dark" href="https://mdbootstrap.com/">African Surveyors Connect</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+
+
+    <!-- MDBootstrap CDN for the UI Kit [Javascript] -->
+    <!-- MDB -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.2.0/mdb.min.js"
+    ></script>
+    <!-- WhatsApp Button -->
+    <!-- GetButton.io widget -->
+<script type="text/javascript">
+  (function () {
+      var options = {
+          whatsapp: "+263718870810", // WhatsApp number
+          call_to_action: "Updates via WhatsApp?", // Call to action
+          position: "right", // Position may be 'right' or 'left'
+          pre_filled_message: "covid", // WhatsApp pre-filled message
+      };
+      var proto = document.location.protocol, host = "getbutton.io", url = proto + "//static." + host;
+      var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
+      s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
+      var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+  })();
+</script>
+<!-- /GetButton.io widget -->
+  </body>
+</html>
